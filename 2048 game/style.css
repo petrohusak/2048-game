@@ -1,0 +1,75 @@
+div#gameField{
+    display: block;
+    background-color: rgb(115, 177, 65);
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+}
+
+div#firstLine{
+    display: block;
+    /* background-color: coral; */
+    position: relative;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+div#secondLine{
+    display: block;
+    /* background-color: cornflowerblue; */
+    position: relative;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+div#thirdLine{
+    display: block;
+    /* background-color: cornsilk; */
+    position: relative;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+div#fourthLine{
+    display: block;
+    /* background-color: crimson; */
+    position: relative;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+#oneOne, #oneTwo, #oneThree, #oneFour, #twoOne, #twoTwo, #twoThree, #twoFour, 
+#threeOne, #threeTwo, #threeThree, #threeFour, #fourOne, #fourTwo, #fourThree, #fourFour{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(115, 177, 65);
+    border: 2px solid black;
+}
+
+#oneTwo, #twoTwo, #threeTwo, #fourTwo{
+    left: 100px;
+    top: -104px;
+}
+
+#oneThree, #twoThree, #threeThree, #fourThree{
+    left: 200px;
+    top: -208px;
+}
+
+#oneFour, #twoFour, #threeFour, #fourFour{
+    left: 300px;
+    top: -312px;
+}
+
