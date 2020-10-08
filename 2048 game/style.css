@@ -1,6 +1,6 @@
 div#gameField{
     display: block;
-    background-color: rgb(115, 177, 65);
+    background-color: white;
     position: relative;
     width: 400px;
     height: 400px;
@@ -11,7 +11,6 @@ div#gameField{
 
 div#firstLine{
     display: block;
-    /* background-color: coral; */
     position: relative;
     height: 100px;
     width: 400px;
@@ -21,7 +20,6 @@ div#firstLine{
 
 div#secondLine{
     display: block;
-    /* background-color: cornflowerblue; */
     position: relative;
     height: 100px;
     width: 400px;
@@ -31,7 +29,6 @@ div#secondLine{
 
 div#thirdLine{
     display: block;
-    /* background-color: cornsilk; */
     position: relative;
     height: 100px;
     width: 400px;
@@ -41,7 +38,6 @@ div#thirdLine{
 
 div#fourthLine{
     display: block;
-    /* background-color: crimson; */
     position: relative;
     height: 100px;
     width: 400px;
@@ -49,27 +45,72 @@ div#fourthLine{
     margin-right: auto;   
 }
 
-#oneOne, #oneTwo, #oneThree, #oneFour, #twoOne, #twoTwo, #twoThree, #twoFour, 
-#threeOne, #threeTwo, #threeThree, #threeFour, #fourOne, #fourTwo, #fourThree, #fourFour{
+.input0, .input1, .input2, .input3, .input4, .input5, .input6, .input7, 
+.input8, .input9, .input10, .input11, .input12, .input13, .input14, .input15{
     position: relative;
     width: 100px;
     height: 100px;
-    background-color: rgb(115, 177, 65);
+    background-color: rgb(183, 155, 209);
     border: 2px solid black;
+    text-align: center;
+    line-height: 100px;
 }
 
-#oneTwo, #twoTwo, #threeTwo, #fourTwo{
+.input1, .input5, .input9, .input13{
     left: 100px;
     top: -104px;
 }
 
-#oneThree, #twoThree, #threeThree, #fourThree{
+.input2, .input6, .input10, .input14{
     left: 200px;
     top: -208px;
 }
 
-#oneFour, #twoFour, #threeFour, #fourFour{
+.input3, .input7, .input11, .input15{
     left: 300px;
     top: -312px;
 }
 
+.two{
+    background-color: azure;
+}
+
+.four{
+    background-color: bisque;
+}
+
+.eight{
+    background-color: burlywood;
+}
+
+.sixteen{
+    background-color: chartreuse;
+}
+
+.thirtyTwo{
+    background-color: chocolate;
+}
+
+.sixtyFour{
+    background-color: crimson;
+}
+
+.oneHundredTwentyEight{
+    background-color: darkgoldenrod;
+}
+
+.twoHundredFiftySix{
+   background-color: darkorange;
+}
+
+.fiveHundredTwelve{
+    background-color: darkslategray;
+}
+
+.oneThousandTwentyFour{
+    background-color: darkviolet;
+}
+
+.twoThousandFortyEight{
+    background-color: gold;
+}
