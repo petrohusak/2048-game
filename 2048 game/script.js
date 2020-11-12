@@ -68,30 +68,37 @@ function startMove(event){
             arrayWithSortedLines[3] = fourthLine;
            
             for(let i = 0; i < 4; i++){
-                let counter = 0;
-                for(let j = 0; j < 4; ){
+                let counter=0;
+                for(let j = 0; j < 4; ){ //takes empty fields between cells with numbers
                     
-                    
-                    if(arrayWithSortedLines[i][j] == arrayWithSortedLines[i][j-1] && arrayWithSortedLines[i][j] != ` `){
-                        if((j+1) != 4){
-                            arrayWithSortedLines[i][j-1] = (+arrayWithSortedLines[i][j] * 2) + ``;
-                            arrayWithSortedLines[i].splice([j], 1);
-                            arrayWithSortedLines[i].push(` `);
-                        }
-                    }else if(arrayWithSortedLines[i][j] == ` `){
-                        if((j+1) != 4){
-                            arrayWithSortedLines[i][j] = arrayWithSortedLines[i][j+1];
-                            arrayWithSortedLines[i].splice([j+1], 1);
-                            arrayWithSortedLines[i].push(` `);
-                        }
-                        
+                    if((arrayWithSortedLines[i][j+1] == ` `||arrayWithSortedLines[i][j+1] != ` `) && arrayWithSortedLines[i][j] == ` ` && (j+1) != 4){
+                        arrayWithSortedLines[i][j] = arrayWithSortedLines[i][j+1];
+                        arrayWithSortedLines[i].splice([j+1], 1);
+                        arrayWithSortedLines[i].push(` `);
                         counter++;
+                        if(counter == 3){
+                            j++;
+                            counter=0;
+                        }                        
+                    }else {
+                        j++;
+                    }
+                }
+
+                for(let j = 0; j < 4;){
+                    if(arrayWithSortedLines[i][j+1] == ` ` || (j + 1) == 4){ //if the next cell is empty, then there are no more numbers in this line
+                        break;
                     }
 
-                    if(counter == 3 || arrayWithSortedLines[i][j] != ` `){
+                    if(arrayWithSortedLines[i][j] == arrayWithSortedLines[i][j+1]){
+                        arrayWithSortedLines[i][j] = (+arrayWithSortedLines[i][j] * 2) + ``;
+                        arrayWithSortedLines[i].splice([j+1], 1);
+                        arrayWithSortedLines[i].push(` `);
                         j++;
-                        counter=0;
+                    }else {
+                        j++;
                     }
+
                 }
             }
 
@@ -119,10 +126,10 @@ function startMove(event){
                
             } else if(event.key == `d` || event.key == `ArrowRight`){
              
-                outputArray = [arrayWithSortedLines[0][0], arrayWithSortedLines[1][0], arrayWithSortedLines[2][0], arrayWithSortedLines[3][0], 
-                    arrayWithSortedLines[0][1], arrayWithSortedLines[1][1], arrayWithSortedLines[2][1], arrayWithSortedLines[3][1], 
-                    arrayWithSortedLines[0][2], arrayWithSortedLines[1][2], arrayWithSortedLines[2][2], arrayWithSortedLines[3][2], 
-                    arrayWithSortedLines[0][3], arrayWithSortedLines[1][3], arrayWithSortedLines[2][3], arrayWithSortedLines[3][3]];
+                outputArray = [arrayWithSortedLines[0][3], arrayWithSortedLines[0][2], arrayWithSortedLines[0][1], arrayWithSortedLines[0][0], 
+                    arrayWithSortedLines[1][3], arrayWithSortedLines[1][2], arrayWithSortedLines[1][1], arrayWithSortedLines[1][0], 
+                    arrayWithSortedLines[2][3], arrayWithSortedLines[2][2], arrayWithSortedLines[2][1], arrayWithSortedLines[2][0], 
+                    arrayWithSortedLines[3][3], arrayWithSortedLines[3][2], arrayWithSortedLines[3][1], arrayWithSortedLines[3][0]];
 
             }
             console.log(outputArray);
