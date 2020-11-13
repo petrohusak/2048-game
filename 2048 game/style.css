@@ -1,3 +1,9 @@
+div#startEndInformationField{
+    display: block;
+    height: 100px;
+    text-align: center;
+}
+
 div#gameField{
     display: block;
     background-color: white;
